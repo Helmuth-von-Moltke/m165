@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "665480fc6961d0034e806981"
+  },
+  "address": "Savile Row 213 London",
+  "height": 178,
+  "birthdate": {
+    "$date": "1990-01-01T00:00:00.000Z"
+  },
+  "name": "James Bond",
+  "email": "james.bond@mi6.com",
+  "phone": "1234-5678"
+}]

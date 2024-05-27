@@ -1,0 +1,2 @@
+1. sed: ersetzt #security: mit security: authorization: enabled
+2. sed: ersetzt 127.0.0.1 mit 0.0.0.0 
