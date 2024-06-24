@@ -67,6 +67,7 @@ Damit erlaubt man eine externe Verbindung.
 
 ```
 fuer Datum muss man $date verwenden
+(Quelle: internet)
 ```
 
 ![](7mongoosh.JPG)
@@ -79,4 +80,5 @@ fuer Datum muss man $date verwenden
 3. use lam;	 - DB lam verwenden
 4. show collections; - Kollektionen von lam anzeigen
 5. show tables; - Tabellen von lam anzeigen
+(tables = collections)
 ```
