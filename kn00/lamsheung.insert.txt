@@ -1,0 +1,28 @@
+db.actor.insertOne({ _id: {$oid: 6regw53d52b1f342e71f8f}, name: "de Armas", firstname: "Ana", age: 37, rating: 10 }) 
+db.actor.insertOne({ _id: {$oid: 6regw5343562b1f342e71f8f}, name: "Dobrev", firstname: "Nina", age: 28, rating: 10 })
+db.actor.insertOne({  _id: {$oid: 6re3253d52b187432e71f8f}, name: "Kurilenko", firstname: "Olga", age: 40, rating: 10})
+
+db.movie.insertMany([
+	{ 
+		_id: {$oid: i32fo0vj20ss2vj3}, 
+		title: "Casino Royale", 
+		director: {name: "Hilton", firstname: "Adam"}, 
+		actors: [
+			{$oid: 2tgefoh2n3ri3jrv},
+			{$oid: 34gshgrhjtjr2gr}
+		],
+		length: 115,
+		released: $currentDate
+	},
+	{ 
+		_id: {$oid: i32fo0vj20ss2vj3}, 
+		title: "Stalingrad", 
+		director: {name: "Steele", firstname: "Joe"}, 
+		actors: [
+			{$oid: 2tgefoh2n3ri3jrv},
+			{$oid: 34gshgrhjtjr2gr}
+		],
+		length: 255,
+		released: $currentDate
+	}
+])
