@@ -54,7 +54,9 @@ Dieses Parameter spezifiziert die DB, wo die credentials zu finden sind, von dem
 
 ```
 1. sed: ersetzt #security: mit security: authorization: enabled
+Damit stellt man sicher, dass nur authorisierte Benutzer Operationen durchfuehren koennen.
 2. sed: ersetzt 127.0.0.1 mit 0.0.0.0
+Damit erlaubt man eine externe Verbindung.
 ```
 
 ![](4sed.JPG)
