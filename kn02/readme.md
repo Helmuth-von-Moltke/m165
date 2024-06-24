@@ -8,6 +8,7 @@ Originaldatei: models.drawio
 ```
 A mission has one or more ships involved.
 A dock holds and supplies one or more ships.
+A ship can be involved in any number of missions.
 A ship has one or more sailors assigned.
 ```
 
