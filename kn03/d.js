@@ -1,3 +1,7 @@
+db.docks.drop();
+db.missions.drop();
+db.ships.drop();
+
 var dock1Id = new ObjectId();
 var dock2Id = new ObjectId();
 var mission1Id = new ObjectId();
@@ -69,3 +73,24 @@ db.ships.insertMany([
     ]
   }
 ]);
+
+db.ships.updateOne(
+  { _id: ship1Id },
+  { $set: { ShipName: "USS New Missouri" } }
+);
+
+db.docks.updateMany(
+  { $or: [{ _id: dock1Id }, { _id: dock2Id }] },
+  { $set: { Status: "Operational" } }
+);
+
+db.missions.replaceOne(
+  { _id: mission1Id },
+  {
+    _id: mission1Id,
+    MissionName: "Operation Desert Shield",
+    StartDate: new Date("1990-08-07T00:00:00Z"),
+    EndDate: new Date("1991-01-16T00:00:00Z"),
+    Ships: [ship1Id, ship2Id]
+  }
+);

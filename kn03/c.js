@@ -1,3 +1,7 @@
+db.docks.drop();
+db.missions.drop();
+db.ships.drop();
+
 var dock1Id = new ObjectId();
 var dock2Id = new ObjectId();
 var mission1Id = new ObjectId();
@@ -69,3 +73,25 @@ db.ships.insertMany([
     ]
   }
 ]);
+
+
+print("Docks:");
+printjson(db.docks.find().toArray());
+
+print("Missions starting after 2000:");
+printjson(db.missions.find({ StartDate: { $gte: new Date("2000-01-01T00:00:00Z") } }).toArray());
+
+print("Battleships and Aircraft Carriers:");
+printjson(db.ships.find({ $or: [{ Type: "Battleship" }, { Type: "Aircraft Carrier" }] }).toArray());
+
+print("Ships with sailors named 'John Doe' and 'Jane Smith':");
+printjson(db.ships.find({ "Sailors.Name": { $all: ["John Doe", "Jane Smith"] } }).toArray());
+
+print("Ships with sailors having 'John' in their name:");
+printjson(db.ships.find({ "Sailors.Name": { $regex: /John/ } }).toArray());
+
+print("Ships with projection including _id:");
+printjson(db.ships.find({}, { _id: 1, ShipName: 1, Type: 1 }).toArray());
+
+print("Ships with projection excluding _id:");
+printjson(db.ships.find({}, { _id: 0, ShipName: 1, Type: 1 }).toArray());
