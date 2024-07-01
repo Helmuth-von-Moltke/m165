@@ -62,3 +62,20 @@ Authsource mit einer anderen DB funktioniert nicht.
 ![](6_restoreddb.JPG)
 
 # Skalierung
+
+### replication
+```
+Daten zu anderen DBs kopieren.
+Wenn Hauptdatenbank absturzt, haben sekundaere DBs immer noch Daten.
+Secundaere DBs koennen auch gelesen werden
+Ist wie ein aktives Backup.
+```
+![](7_replication.JPG)
+
+### sharding
+```
+Daten auf verschiedene Servers geteilt speichern.
+Man kann einfach mehr Kapazitaet bekommen indem man mehr Servers einsetzt.
+Queries werden schneller parallel bearbeitet.
+```
+![](7_datasharding.png)
