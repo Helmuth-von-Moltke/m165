@@ -10,14 +10,12 @@ db.docks.insertMany([
   {
     _id: dock1Id,
     DockName: "Naval Station Norfolk",
-    Location: "Norfolk, VA",
-    Ships: [ship1Id, ship2Id]
+    Location: "Norfolk, VA"
   },
   {
     _id: dock2Id,
     DockName: "Pearl Harbor Naval Shipyard",
-    Location: "Honolulu, HI",
-    Ships: [ship3Id]
+    Location: "Honolulu, HI"
   }
 ]);
 
@@ -43,6 +41,7 @@ db.ships.insertOne({
   ShipName: "USS Missouri",
   Type: "Battleship",
   CommissionDate: new Date("1944-06-11T00:00:00Z"),
+  Dockyard: dock1Id,
   Sailors: [
     { SailorID: new ObjectId(), Name: "John Doe", Rank: "Captain", EnlistmentDate: new Date("1980-01-15T00:00:00Z") },
     { SailorID: new ObjectId(), Name: "Jane Smith", Rank: "Lieutenant", EnlistmentDate: new Date("1985-03-10T00:00:00Z") }
@@ -55,6 +54,7 @@ db.ships.insertMany([
     ShipName: "USS Wisconsin",
     Type: "Battleship",
     CommissionDate: new Date("1944-04-16T00:00:00Z"),
+    Dockyard: dock1Id,
     Sailors: [
       { SailorID: new ObjectId(), Name: "Alice Johnson", Rank: "Commander", EnlistmentDate: new Date("1983-07-22T00:00:00Z") }
     ]
@@ -64,6 +64,7 @@ db.ships.insertMany([
     ShipName: "USS Saratoga",
     Type: "Aircraft Carrier",
     CommissionDate: new Date("1956-04-14T00:00:00Z"),
+    Dockyard: dock2Id,
     Sailors: [
       { SailorID: new ObjectId(), Name: "Bob Brown", Rank: "Captain", EnlistmentDate: new Date("1975-06-17T00:00:00Z") }
     ]
