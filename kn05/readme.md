@@ -12,8 +12,6 @@ Authsource mit einer anderen DB funktioniert nicht.
 ![](2_createuser1.JPG)
 ![](2_createuser2.JPG)
 
-
-
 ### Benutzer 1 (obama)
 ![](3_connectionString1.JPG)
 ![](3_user1overview.JPG)
@@ -32,6 +30,8 @@ Authsource mit einer anderen DB funktioniert nicht.
 
 # B Backup und Restore
 
+## SNAPSHOT
+
 #### snapshot erstellen
 ![](5_snapshot.JPG)
 
@@ -43,3 +43,22 @@ Authsource mit einer anderen DB funktioniert nicht.
 ![](5_volumecreated.JPG)
 ![](5_volume.JPG)
 ![](5_volumeattached.JPG)
+
+#### daten zurueck
+![](5_shipsback.JPG)
+
+## MONGODUMP
+
+#### Dump erstellen
+![](6_createddump.JPG)
+
+#### DB loeschen
+![](6_deleteddb.JPG)
+
+#### mongorestore
+![](6_restoredb.JPG)
+
+#### DB zurueck
+![](6_restoreddb.JPG)
+
+# Skalierung
