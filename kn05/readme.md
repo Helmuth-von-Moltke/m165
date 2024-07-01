@@ -8,18 +8,25 @@ Authsource mit einer anderen DB funktioniert nicht.
 
 (Benutzte DB)
 
-Benutzer erstellen:
+### Benutzer erstellen:
 ![](2_createuser1.JPG)
 ![](2_createuser2.JPG)
 
+
+
+### Benutzer 1 (obama)
 ![](3_connectionString1.JPG)
-
-Uebersicht als benutzer 1 (obama)
-
 ![](3_user1overview.JPG)
 
-Operationen: 
-
+#### Operationen: 
 ![](3_insert.JPG)
-
 ![](3.querry.JPG)
+
+### Benutzer 2 (bush)
+![](4_connectionString2.JPG)
+![](4_user2overview.JPG)
+
+#### Operationen:
+![](4_insert.JPG)
+![](4_querry.JPG)
+
