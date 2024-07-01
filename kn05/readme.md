@@ -75,7 +75,19 @@ Ist wie ein aktives Backup.
 ### sharding
 ```
 Daten auf verschiedene Servers geteilt speichern.
+Sharding Router leiten abfragen an den entsprechenden Shards weiter.
 Man kann einfach mehr Kapazitaet bekommen indem man mehr Servers einsetzt.
 Queries werden schneller parallel bearbeitet.
 ```
 ![](7_datasharding.png)
+
+### Beispiel: Vorschlag fuer die eigene Firma
+```
+Rheinmetall:
+Angenommen fuehr Rheinmetall ein System zum Produktdaten speichern.
+
+Verbesserungsvorschlag - Replication:
+Ein Replica Set mit Primaer- und Sekundaerserver einrichten. Dem Primaerserver Abfrageoperationen uebernehmen lassen, dem Sekundaerserver Leseoperationen uebernehmen lassen.
+
+```
+
