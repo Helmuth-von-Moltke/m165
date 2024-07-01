@@ -32,6 +32,14 @@ Authsource mit einer anderen DB funktioniert nicht.
 
 # B Backup und Restore
 
+#### snapshot erstellen
+![](5_snapshot.JPG)
+
 #### drop collection
 ![](5_dropcollection.JPG)
 ![](5_dropconfirmation.JPG)
+
+#### volume erstellen und attach
+![](5_volumecreated.JPG)
+![](5_volume.JPG)
+![](5_volumeattached.JPG)
