@@ -30,3 +30,8 @@ Authsource mit einer anderen DB funktioniert nicht.
 ![](4_insert.JPG)
 ![](4_querry.JPG)
 
+# B Backup und Restore
+
+#### drop collection
+![](5_dropcollection.JPG)
+![](5_dropconfirmation.JPG)
