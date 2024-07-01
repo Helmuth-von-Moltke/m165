@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-07-01T12:43:30.615Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0" etag="LswnfVzJxm6GHELUo8h0" version="24.6.4" type="device">
+<mxfile host="app.diagrams.net" modified="2024-07-01T14:09:37.425Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0" etag="3we50F_BxRlt_IzM9cS2" version="24.6.4" type="device">
   <diagram name="Page-1" id="VH8i9e0uUJv6PNGk_LA1">
     <mxGraphModel dx="873" dy="482" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -70,17 +70,17 @@
         <mxCell id="H25z-8JFa3tywoeOWDJ_-7" value="Sailor" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="245" y="875" width="50" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="H25z-8JFa3tywoeOWDJ_-8" value="&lt;div&gt;Dockyard&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="505" y="875" width="70" height="30" as="geometry" />
+        <mxCell id="H25z-8JFa3tywoeOWDJ_-8" value="&lt;div&gt;Dock&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="515" y="875" width="50" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="H25z-8JFa3tywoeOWDJ_-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="H25z-8JFa3tywoeOWDJ_-3" target="H25z-8JFa3tywoeOWDJ_-1">
+        <mxCell id="H25z-8JFa3tywoeOWDJ_-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.145;exitY=0.145;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.855;entryY=0.145;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="H25z-8JFa3tywoeOWDJ_-3" target="H25z-8JFa3tywoeOWDJ_-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="440" y="805" as="sourcePoint" />
             <mxPoint x="360" y="725" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="H25z-8JFa3tywoeOWDJ_-10" value="includes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="365" y="635" width="70" height="30" as="geometry" />
+          <mxGeometry x="365" y="620" width="70" height="30" as="geometry" />
         </mxCell>
         <mxCell id="H25z-8JFa3tywoeOWDJ_-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.855;exitY=0.855;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.145;entryY=0.145;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="H25z-8JFa3tywoeOWDJ_-1" target="H25z-8JFa3tywoeOWDJ_-4">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -100,17 +100,29 @@
         <mxCell id="H25z-8JFa3tywoeOWDJ_-14" value="is assigned to " style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=90;" vertex="1" parent="1">
           <mxGeometry x="240" y="765" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="H25z-8JFa3tywoeOWDJ_-15" value="&lt;div&gt;shipname: string&lt;/div&gt;&lt;div&gt;type: string&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="130" y="600" width="110" height="40" as="geometry" />
+        <mxCell id="H25z-8JFa3tywoeOWDJ_-15" value="&lt;div&gt;shipid: int&lt;br&gt;&lt;/div&gt;&lt;div&gt;shipname: string&lt;/div&gt;&lt;div&gt;type: string&lt;/div&gt;&lt;div&gt;dockyard: dockid&lt;/div&gt;&lt;div&gt;sailors: Array&amp;lt;sailorid&amp;gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="550" width="140" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="H25z-8JFa3tywoeOWDJ_-16" value="codename: string" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="570" y="610" width="110" height="30" as="geometry" />
+        <mxCell id="H25z-8JFa3tywoeOWDJ_-16" value="&lt;div&gt;missionid: int&lt;/div&gt;&lt;div&gt;codename: string&lt;/div&gt;&lt;div&gt;startdate: $date&lt;/div&gt;&lt;div&gt;enddate: $date&lt;/div&gt;&lt;div&gt;ships: Array&amp;lt;shipid&amp;gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="570" y="550" width="130" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="H25z-8JFa3tywoeOWDJ_-17" value="&lt;div&gt;dockname: string&lt;/div&gt;&lt;div&gt;location: string&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="570" y="920" width="110" height="40" as="geometry" />
+        <mxCell id="H25z-8JFa3tywoeOWDJ_-17" value="&lt;div&gt;dockid: int&lt;br&gt;&lt;/div&gt;&lt;div&gt;dockname: string&lt;/div&gt;&lt;div&gt;location: string&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="570" y="920" width="110" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="H25z-8JFa3tywoeOWDJ_-18" value="&lt;div&gt;firstname: string&lt;/div&gt;&lt;div&gt;lastname: string&lt;/div&gt;&lt;div&gt;rank: string&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="130" y="920" width="110" height="60" as="geometry" />
+        <mxCell id="H25z-8JFa3tywoeOWDJ_-18" value="&lt;div&gt;sailorid: int&lt;br&gt;&lt;/div&gt;&lt;div&gt;name: string&lt;/div&gt;&lt;div&gt;rank: string&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="150" y="920" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="H25z-8JFa3tywoeOWDJ_-19" value="is captain: bool" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=90;" vertex="1" parent="1">
+          <mxGeometry x="195" y="765" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="H25z-8JFa3tywoeOWDJ_-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.855;exitY=0.855;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.145;entryY=0.855;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="H25z-8JFa3tywoeOWDJ_-1" target="H25z-8JFa3tywoeOWDJ_-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="810" as="sourcePoint" />
+            <mxPoint x="420" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H25z-8JFa3tywoeOWDJ_-21" value="&lt;div&gt;is flagship: bool&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="350" y="660" width="100" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
