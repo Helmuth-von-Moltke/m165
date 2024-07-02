@@ -26,3 +26,6 @@ MATCH (s:Ship {ShipName: "USS Missouri"})<-[:ASSIGNED_TO]-(sailor:Sailor) RETURN
 
 ### Alle Missionen returnen, die Battleships involviert sind
 MATCH (m:Mission)-[:INCLUDES]->(s:Ship {Type: "Battleship"}) RETURN m;
+
+### Alle Aircraft Carriers returnen die in der Mission Enduring Freedom involviert sind
+MATCH (m:Mission {MissionName: "Operation Enduring Freedom"})-[:INCLUDES]->(s:Ship {Type: "Aircraft Carrier"}) RETURN s;
