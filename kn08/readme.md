@@ -73,6 +73,6 @@ MATCH (sailor:Sailor {Name: "Jane Smith"}) SET sailor.Rank = "Captain";
 
 #### Fall: Ein Sailor wird zum Aircraft Carrier USS Enterprise transferiert
 ```
-MATCH (sailor:Sailor {Name: "John Doe"})-[r:ASSIGNED_TO]->(old:Ship) DELETE r WITH sailor MATCH (new:Ship {ShipName: "USS Enterprise"}) CREATE (sailor)-[:ASSIGNED_TO]->(new);
+MATCH (sailor:Sailor {Name: "Jane Smith"})-[r:ASSIGNED_TO]->(old:Ship) DELETE r WITH sailor MATCH (new:Ship {ShipName: "USS Enterprise"}) CREATE (sailor)-[:ASSIGNED_TO]->(new);
 ```
 
