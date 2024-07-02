@@ -61,3 +61,18 @@ MATCH (s:Ship {ShipName: "USS Missouri"}) DETACH DELETE s;
 ![](4_nachherr.JPG)
 
 # D Datenveraendern
+#### Fall: Das Schiff USS Wisconsin wird zu einem Cruiser umgebaut
+```
+MATCH (s:Ship {ShipName: "USS Wisconsin"}) SET s.Type = "Cruiser";
+```
+
+#### Fall: Ein Sailor wird Promoted
+```
+MATCH (sailor:Sailor {Name: "Jane Smith"}) SET sailor.Rank = "Captain";
+```
+
+#### Fall: Ein Sailor wird zum Aircraft Carrier USS Enterprise transferiert
+```
+MATCH (sailor:Sailor {Name: "John Doe"})-[r:ASSIGNED_TO]->(oldShip:Ship) DELETE r WITH sailor MATCH (newShip:Ship {ShipName: "USS Enterprise"}) CREATE (sailor)-:ASSIGNED_TO]->(newShip);
+```
+
