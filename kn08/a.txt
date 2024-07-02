@@ -1,0 +1,31 @@
+CREATE
+  (m1:Mission {MissionID: 1, MissionName: "Operation Desert Storm", StartDate: date('1991-01-17'), EndDate: date('1991-02-28')}),
+  (m2:Mission {MissionID: 2, MissionName: "Operation Enduring Freedom", StartDate: date('2001-10-07'), EndDate: date('2014-12-28')}),
+  (m3:Mission {MissionID: 3, MissionName: "Operation Iraqi Freedom", StartDate: date('2003-03-20'), EndDate: date('2011-12-15')}),
+
+  (s1:Ship {ShipID: 1, ShipName: "USS Missouri", Type: "Battleship", CommissionDate: date('1944-06-11')}),
+  (s2:Ship {ShipID: 2, ShipName: "USS Wisconsin", Type: "Battleship", CommissionDate: date('1944-04-16')}),
+  (s3:Ship {ShipID: 3, ShipName: "USS Enterprise", Type: "Aircraft Carrier", CommissionDate: date('1961-11-25')}),
+  (s4:Ship {ShipID: 4, ShipName: "USS Nimitz", Type: "Aircraft Carrier", CommissionDate: date('1975-05-03')}),
+
+  (d1:Dock {DockID: 1, DockName: "Naval Station Norfolk", Location: "Norfolk, VA"}),
+  (d2:Dock {DockID: 2, DockName: "Pearl Harbor Naval Shipyard", Location: "Honolulu, HI"}),
+  (d3:Dock {DockID: 3, DockName: "Naval Base San Diego", Location: "San Diego, CA"}),
+
+  (sailor1:Sailor {SailorID: 1, Name: "John Doe", Rank: "Captain", EnlistmentDate: date('1980-01-15')}),
+  (sailor2:Sailor {SailorID: 2, Name: "Jane Smith", Rank: "Lieutenant", EnlistmentDate: date('1985-03-10')}),
+  (sailor3:Sailor {SailorID: 3, Name: "Jim Brown", Rank: "Commander", EnlistmentDate: date('1990-05-22')}),
+  (sailor4:Sailor {SailorID: 4, Name: "Alice Johnson", Rank: "Ensign", EnlistmentDate: date('2005-06-14')}),
+
+  (m1)-[:INCLUDES]->(s1),
+  (m1)-[:INCLUDES]->(s2),
+  (m2)-[:INCLUDES]->(s3),
+  (m3)-[:INCLUDES]->(s4),
+  (s1)-[:DOCKED_AT]->(d1),
+  (s2)-[:DOCKED_AT]->(d2),
+  (s3)-[:DOCKED_AT]->(d3),
+  (s4)-[:DOCKED_AT]->(d1),
+  (sailor1)-[:ASSIGNED_TO]->(s1),
+  (sailor2)-[:ASSIGNED_TO]->(s2),
+  (sailor3)-[:ASSIGNED_TO]->(s3),
+  (sailor4)-[:ASSIGNED_TO]->(s4);
