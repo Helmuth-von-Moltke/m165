@@ -15,3 +15,4 @@ MATCH (n)-[r]->(m) RETURN n;
 MATCH (n) OPTIONAL MATCH (n)-[r]->(m) RETURN n, r, m;
 ```
 #### Dieses Statment sucht alle patterns wie (n)-[r]->(m), returns aber trotzdem alle Knoten und Kanten auch wenn solche Kanten nicht existieren.
+![](2_matchhh.JPG)
