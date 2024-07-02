@@ -20,7 +20,7 @@ MATCH (n) OPTIONAL MATCH (n)-[r]->(m) RETURN n, r, m;
 ## Szenarien:
 ### Alle Schiffe returnen, die in der Mission Desert Storm beteilligt sind
 ```
-MATCH (m:Mission {MissionName: "Operation Desert Storm"})-[:INCLUDES]->(s:Ship) WHERE s.type = "Battleship" RETURN s;
+MATCH (m:Mission {MissionName: "Operation Desert Storm"})-[:INCLUDES]->(s:Ship) WHERE s.Type = "Battleship" RETURN s;
 ```
 
 ### Alle Sailors returnen, die auf USS Missouri sind
