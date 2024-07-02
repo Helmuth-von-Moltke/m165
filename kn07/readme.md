@@ -13,12 +13,9 @@ Ich konnte hier mich local anmelden und mit dem Instanz verbinden
 ![](2_model.JPG)
 
 ```
-Eine Mission beinhaltet mehrere Schiffe.
-Ein Schiff kann als Flagship in einer Mission dienen.
+A mission includes ships.
 
-Ein Schiff ist in genau einer werft parkiert.
+A ship docks at a dock.
 
-Ein Seemann dient auf einem Schiff.
-Ein Seemann kann auch als Kapitaen des Schiffs dienen.
-
+A sailor is assigned to a ship.
 ```
