@@ -22,18 +22,22 @@ MATCH (n) OPTIONAL MATCH (n)-[r]->(m) RETURN n, r, m;
 ```
 MATCH (m:Mission {MissionName: "Operation Desert Storm"})-[:INCLUDES]->(s:Ship) WHERE s.Type = "Battleship" RETURN s;
 ```
+![](21_scenario1.JPG)
 
 ### Alle Sailors returnen, die auf USS Missouri sind
 ```
 MATCH (s:Ship {ShipName: "USS Missouri"})<-[:ASSIGNED_TO]-(sailor:Sailor) RETURN sailor;
 ```
+![](21_scenario2.JPG)
 
 ### Alle Missionen returnen, die Battleships involviert sind
 ```
 MATCH (m:Mission)-[:INCLUDES]->(s:Ship) WHERE s.Type = "Battleship" RETURN m;
 ```
+![](21_scenario3.JPG)
 
 ### Alle Aircraft Carriers returnen die in der Mission Enduring Freedom involviert sind
 ```
 MATCH (m:Mission {MissionName: "Operation Enduring Freedom"})-[:INCLUDES]->(s:Ship {Type: "Aircraft Carrier"}) RETURN s;
 ```
+![](21_scenario4.JPG)
