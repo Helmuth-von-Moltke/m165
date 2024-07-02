@@ -44,17 +44,20 @@ MATCH (m:Mission {MissionName: "Operation Enduring Freedom"})-[:INCLUDES]->(s:Sh
 
 # C Daten loeschen
 ### Vorher
-
+![](3_vorher.JPG)
 ```
 MATCH (s:Ship {ShipName: "USS Missouri"}) DELETE s;
 ```
 ### Nachher
-
+![](3_nachher.JPG)
+![](3_nachherr.JPG)
 #### Das Loeschen geht nicht weil USS Missouri noch Beziehungen hat
-
-### Vorher
-
 ```
 MATCH (s:Ship {ShipName: "USS Missouri"}) DETACH DELETE s;
 ```
 ### Nachher
+![](4_nachher.JPG)
+#### USS Missouri und ihre Beziehungen wurden geloescht
+![](4_nachherr.JPG)
+
+# D Datenveraendern
