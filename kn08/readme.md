@@ -41,3 +41,8 @@ MATCH (m:Mission)-[:INCLUDES]->(s:Ship) WHERE s.Type = "Battleship" RETURN m;
 MATCH (m:Mission {MissionName: "Operation Enduring Freedom"})-[:INCLUDES]->(s:Ship {Type: "Aircraft Carrier"}) RETURN s;
 ```
 ![](21_scenario4.JPG)
+
+# C Daten loeschen
+### Vorher
+
+### Nachher
