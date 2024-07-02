@@ -16,3 +16,7 @@ MATCH (n) OPTIONAL MATCH (n)-[r]->(m) RETURN n, r, m;
 ```
 #### Dieses Statment sucht alle patterns wie (n)-[r]->(m), returns aber trotzdem alle Knoten und Kanten auch wenn solche Kanten nicht existieren.
 ![](2_matchhh.JPG)
+
+## Szenarien:
+### Alle Schiffe returnen, die in der Mission Desert Storm beteilligt sind
+MATCH (m:Mission {MissionName: "Operation Desert Storm"})-[:INCLUDES]->(s:Ship) RETURN s;
