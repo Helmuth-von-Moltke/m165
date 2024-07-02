@@ -65,14 +65,14 @@ MATCH (s:Ship {ShipName: "USS Missouri"}) DETACH DELETE s;
 ```
 MATCH (s:Ship {ShipName: "USS Wisconsin"}) SET s.Type = "Cruiser";
 ```
-
+![](55_1.JPG)
 #### Fall: Ein Sailor wird Promoted
 ```
 MATCH (sailor:Sailor {Name: "Jane Smith"}) SET sailor.Rank = "Captain";
 ```
-
+![](55_2.JPG)
 #### Fall: Ein Sailor wird zum Aircraft Carrier USS Enterprise transferiert
 ```
 MATCH (sailor:Sailor {Name: "Jane Smith"})-[r:ASSIGNED_TO]->(old:Ship) DELETE r WITH sailor MATCH (new:Ship {ShipName: "USS Enterprise"}) CREATE (sailor)-[:ASSIGNED_TO]->(new);
 ```
-
+![](55_3.JPG)
