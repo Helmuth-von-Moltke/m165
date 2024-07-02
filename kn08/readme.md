@@ -76,3 +76,21 @@ MATCH (sailor:Sailor {Name: "Jane Smith"}) SET sailor.Rank = "Captain";
 MATCH (sailor:Sailor {Name: "Jane Smith"})-[r:ASSIGNED_TO]->(old:Ship) DELETE r WITH sailor MATCH (new:Ship {ShipName: "USS Enterprise"}) CREATE (sailor)-[:ASSIGNED_TO]->(new);
 ```
 ![](55_3.JPG)
+
+# E Zusaetzliche Klauseln
+### FOREACH
+Man kann eine Liste erstellen und sie mit FOREACH durch iterieren
+#### Beispiel: Mehrere Sailors gleichzeitig zu einem Schiff zuweisen
+```
+WITH ["John DOe", "Jane Smith"] AS sailors
+
+FOREACH (name IN sailors | CREATE (s:Sailor {Name: name}) WITH s MATCH (ship:Ship {ShipName: "USS Enterprise"}) CREATE (s)-[:ASSIGNED_TO]->(ship));
+```
+Hier werden John Doe und Jane Smith in einem Statement zum Schiff USS Enterprise mit hilfe der FOREACH zugewiesen.
+### MERGE
+Mit merge kann man ueberpruefen, ob bestimmte Knoten oder Kanten bereits existieren. Wenn sie nicht existieren, werden sie erstellt.
+#### Beispiel: 
+```
+MERGE (s:Sailor {Name: "John Doe"}) WITH s MATCH (ship:Ship {ShipName: "USS Enterprise"}) MERGE (s)-[:ASSIGNED_TO]->(ship);
+```
+Hier wird es ueberprueft, ob John Doe bereits existiert. Angenommen existiert er noch nicht, dann wird er erstellt. Es wird auch noch ueberprueft, ob eine Beziehung zwischen John Doe und USS Enterprise existiert. Da sie noch nicht existiert wird sie auch erstellt. Mit Merge verhindere ich, dass diese Sachen doppelt existieren.
