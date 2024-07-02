@@ -8,5 +8,5 @@
 ```
 MATCH (n)-[r]->(m) RETURN n;
 ```
-#### Dieses Statement sucht alle patterns, die eine Verbinding wie (Knoten)-[Kanten]->(Knoten auf der anderen Seite) sucht.
+#### Dieses Statement sucht alle patterns, die alle Verbindingen die wie (Knoten)-[Kanten]->(Knoten auf der anderen Seite) aussehen.
 ![](2_matchh.JPG)
