@@ -67,7 +67,8 @@ Damit erlaubt man eine externe Verbindung aus allen IP-Addressen.
 
 ```
 fuer Datum muss man $date verwenden
-(Quelle: internet)
+$date ist eine Representation(?) von dates von MongoDB zu JSON.
+Quelle: [stackoverflow](https://stackoverflow.com/questions/26901294/how-to-insert-date-into-mongo-from-json-file)
 ```
 
 ![](7mongoosh.JPG)
